@@ -1,0 +1,442 @@
+Matrix Exercises
+
+Task 1. Find the Maximum Element in a Matrix
+Description
+
+You are given a rectangular matrix of integers.
+
+Find the maximum element in the matrix and print:
+
+the maximum value;
+its row index;
+its column index.
+
+If there are several maximum values, print the coordinates of the first one found.
+
+Example
+1 5 2
+8 4 7
+6 8 3
+
+Output
+
+Maximum: 8
+Row: 1
+Column: 0
+Restrictions
+
+Do NOT use:
+
+for
+max()
+sorted()
+enumerate()
+zip()
+list comprehensions
+numpy
+recursion
+
+You MUST use:
+
+while
+index-based access (matrix[i][j])
+ordinary variables
+
+
+Task 2. Swap the First and the Last Rows
+Description
+
+You are given a matrix.
+
+Swap the first row with the last row.
+
+Print the modified matrix.
+
+Example
+
+Input
+
+1 2 3
+4 5 6
+7 8 9
+
+Output
+
+7 8 9
+4 5 6
+1 2 3
+Restrictions
+
+Do NOT use:
+
+for
+slicing ([:])
+tuple assignment
+
+Example of forbidden code:
+
+matrix[0], matrix[-1] = matrix[-1], matrix[0]
+reverse()
+reversed()
+enumerate()
+
+You MUST use:
+
+while
+temporary variables
+element-by-element swapping
+
+Task 3. Check Whether a Matrix Is Symmetric
+Description
+
+You are given a square matrix.
+
+Determine whether it is symmetric relative to the main diagonal.
+
+Print
+
+YES
+
+or
+
+NO
+Restrictions
+
+Do NOT use:
+
+for
+zip()
+all()
+any()
+numpy
+
+You MUST use:
+
+nested while loops
+index comparison
+Task 4. Sum All Elements Above the Main Diagonal
+Description
+
+You are given a square matrix.
+
+Calculate the sum of all elements located strictly above the main diagonal.
+
+The main diagonal itself must NOT be included.
+
+Example
+1 2 3
+4 5 6
+7 8 9
+
+Output
+
+11
+
+because
+
+2 + 3 + 6 = 11
+Restrictions
+
+Do NOT use:
+
+for
+sum()
+numpy
+generators
+list comprehensions
+
+You MUST use:
+
+nested while loops
+a manually updated accumulator variable
+
+Task 5. Find the Row with the Largest Sum
+Description
+
+Calculate the sum of every row.
+
+Print
+
+the row index
+its sum
+
+for the row having the largest sum.
+
+Restrictions
+
+Do NOT use:
+
+for
+sum()
+max()
+sorted()
+enumerate()
+
+You MUST use:
+
+nested while
+manual summation
+manual comparison
+
+Task 6. Reverse Every Row
+Description
+
+Reverse every row of the matrix.
+
+Example
+
+Input
+
+1 2 3
+4 5 6
+
+Output
+
+3 2 1
+6 5 4
+Restrictions
+
+Do NOT use:
+
+for
+slicing ([::-1])
+reverse()
+reversed()
+
+You MUST use:
+
+while
+two indices
+swapping using a temporary variable
+
+Task 7. Find the Longest Horizontal Sequence
+Description
+
+Find the length of the longest consecutive horizontal sequence of equal numbers.
+
+Example
+1 1 1 2 3
+5 5 5 5 7
+8 8 2 2 2
+
+Output
+
+4
+
+because there are four consecutive 5s.
+
+Restrictions
+
+Do NOT use:
+
+for
+max()
+itertools.groupby()
+collections
+numpy
+
+You MUST use:
+
+nested while
+your own counters
+manual comparison
+
+
+
+
+Dictionary Exercises
+Task 1. Create a Phone Book
+Description
+
+Create a dictionary where
+
+the key is a person's name;
+the value is their phone number.
+
+Ask the user to enter a name.
+
+If the name exists, print the phone number.
+
+Otherwise print
+
+Contact not found
+Restrictions
+
+Do NOT use:
+
+try/except
+setdefault()
+defaultdict
+
+You MAY use:
+
+if
+in
+
+
+Task 2. Count Word Occurrences
+Description
+
+The user enters a line of text.
+
+Example
+
+cat dog cat cat mouse
+
+Create a dictionary containing the number of occurrences of each word.
+
+Expected output
+
+cat : 3
+dog : 1
+mouse : 1
+Restrictions
+
+Do NOT use:
+
+collections.Counter
+defaultdict
+
+You MUST use:
+
+a regular dictionary
+if word in dictionary
+
+
+
+Task 3. Find the Student with the Highest Grade
+Description
+
+You are given a dictionary.
+
+Example
+
+{
+    "Anna": 7,
+    "Peter": 10,
+    "John": 9
+}
+
+Print the name of the student with the highest grade.
+
+Restrictions
+
+Do NOT use:
+
+max()
+sorted()
+lambda
+
+You MUST use:
+
+a loop
+manual comparison
+
+
+Task 4. Increase Every Grade by One
+Description
+
+You are given a dictionary of student grades.
+
+Increase every grade by 1.
+
+If a grade becomes greater than 10, keep it equal to 10.
+
+Modify the existing dictionary.
+
+Restrictions
+
+Do NOT use:
+
+dictionary comprehensions
+creating another dictionary
+
+Modify the original dictionary only.
+
+
+
+Task 5. Find Cheap Products
+Description
+
+You are given a dictionary of product prices.
+
+Example
+
+{
+    "Bread": 4,
+    "Milk": 7,
+    "Cheese": 15,
+    "Apples": 5
+}
+
+Ask the user to enter a price.
+
+Print the names of all products that cost less than the entered price.
+
+Restrictions
+
+Do NOT use:
+
+filter()
+sorted()
+dictionary comprehensions
+
+
+
+Task 6. Merge Two Dictionaries
+Description
+
+You are given two dictionaries.
+
+Merge them into one.
+
+If the same key exists in both dictionaries, the value from the second dictionary must overwrite the value from the first one.
+
+Restrictions
+
+Do NOT use:
+
+update()
+the merge operator (|)
+dictionary comprehensions
+
+You MUST use:
+
+a loop
+manual assignment
+
+
+Task 7. Reverse Keys and Values
+Description
+
+Convert the dictionary
+
+{
+    "cat": "кот",
+    "dog": "собака",
+    "mouse": "мышь"
+}
+
+into
+
+{
+    "кот": "cat",
+    "собака": "dog",
+    "мышь": "mouse"
+}
+
+Create a new dictionary manually.
+
+Restrictions
+
+Do NOT use:
+
+dictionary comprehensions
+zip()
+dict()
+reversed()
+
+You MUST use:
+
+a loop
+manual insertion of key-value pairs into the new dictionary
